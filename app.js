@@ -18,12 +18,12 @@ valorC = parseInt(valorC)
 
 resultadoOp = valorA + valorB + valorC
 
-console.log (resultadoOp)
+console.log ("Precio Base:" + "" + resultadoOp)
 
 if (resultadoOp>=100 && resultadoOp<=200)
 {
     console.log ("Aplicar 10 % entra de descuento")
-    console.log (resultadoOp * 0.90)
+    console.log ("Precio con descuento aplicado:" + resultadoOp * 0.90)
     alert (resultadoOp * 0.90)
 }
 else
@@ -31,7 +31,7 @@ else
     if (resultadoOp>=201 && resultadoOp<=400)
     {
         console.log ("Aplicar 20 % entra de descuento")
-        console.log (resultadoOp * 0.80)
+        console.log ("Precio con descuento aplicado:" + resultadoOp * 0.80)
         alert (resultadoOp * 0.80)  
     }
     else
@@ -39,7 +39,7 @@ else
         if (resultadoOp>=401 && resultadoOp<=700)
         {
             console.log ("Aplicar 25 % entra de descuento")
-            console.log (resultadoOp * 0.75)
+            console.log ("Precio con descuento aplicado:" + resultadoOp * 0.75)
             alert (resultadoOp * 0.75)
         }
         else (resultadoOp<=99)
@@ -74,10 +74,39 @@ do {
     }
 } while (opcion !=4);
 
+/// Marcas que se ofrece, tipo de producto y los descuentos del mes (array de objetos) ///
 
+const arrayDeMarcas = [
+{
+    marca: "Kaspersky",
+    soluciones: "Software",
+    descuentoDelMes: "28%",
+},
+{
+    marca: "Fortinet",
+    soluciones: "Hardware/Software",
+    descuentoDelMes: "20%",
+},
+{
+    marca: "Vmware",
+    soluciones: "Software",
+    descuentoDelMes: "30%", 
+},
+];
 
+    for (let i = 0; i < arrayDeMarcas.length; i++){
+        console.log ("================================================")
+        console.log ("Marca:" + arrayDeMarcas[i].marca);
+        console.log ("Soluciones:" + arrayDeMarcas[i].soluciones);
+        console.log ("Descuentos Del Mes:" + arrayDeMarcas[i].descuentoDelMes);
+    }
 
+/// Tipo de formas de pago para la adquisicion de los productos ///
 
+const fornmasDePago = ["Fob Miami","Tarjeta de Credito", "Transferencia Bancaria", "Dolar Billete"]
 
+fornmasDePago.forEach ((formaDePago) => {
+    console.log ("Opcion : " + formaDePago)
+});
 
 
